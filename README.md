@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+脚手架：create-react-app
+<br/>
+技术栈：react, react-router(4.0+), redux, react-redux, redux-saga, mock.js
+<br/>
+
+
 
 ## Available Scripts
 
