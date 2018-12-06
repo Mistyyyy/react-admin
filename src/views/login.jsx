@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Input, Select } from 'antd'
-import styles from '../style/index.css' 
+import styles from '../style/login.css' 
 const InputGroup = Input.Group;
 const Option = Select.Option;
 class Login extends Component {
@@ -35,7 +35,7 @@ class Login extends Component {
       this.setState({
         userType: value,
         username: '',
-        password: ''
+        password: '`'
       })
     }
   }

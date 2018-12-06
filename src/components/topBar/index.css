@@ -1,0 +1,13 @@
+:local(.topWrapper) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0px 20px;
+  background-color: rgb(0, 162, 255);
+}
+
+:local(.userInfo) {
+  display: inline-flex;
+  align-items: center;
+}
