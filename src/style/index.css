@@ -1,0 +1,49 @@
+
+:local(.loginWrapper) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #fdd;
+}
+
+:local(.loginContent) {
+  display: flex; 
+  flex-direction: column;
+  width: 660px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+:local(.signTitle) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  position: relative;
+  background: url('../assert/img/login.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+:local(.signContent) {
+  flex-grow: 1;
+  padding: 30px 50px;
+}
+
+:local(.inputItem) {
+  display: flex;
+  align-items: center;
+  padding: 20px 5px;
+}
+
+:local(.labelName) {
+  display: inline-block;
+  width: 90px;
+}
+
+:global(.ant-input-group) {
+  display: flex;
+  align-items: center;
+}
