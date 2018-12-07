@@ -52,9 +52,6 @@ class Sider extends Component {
   render() {
     return (
       <div className={styles.siderWrapper}>
-        {/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-          <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
-        </Button> */}
         <Menu
         onClick={this.handleClick}
         style={{ width: 280 }}
