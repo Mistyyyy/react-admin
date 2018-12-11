@@ -10,7 +10,11 @@ class Main extends Component {
         <TopBar />
         <div className={styles.contentWrapper}>
           <Sider />
-          <SidePage />
+          <SidePage>
+            {
+              this.props.children
+            }
+          </SidePage>
         </div>
       </div>
     )
