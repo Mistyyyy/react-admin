@@ -1,151 +1,214 @@
 const menuList = [
   {
-    title: '第一项',
-    link: '/one',
-    id: 'first item',
+    title: 'dashbord',
+    link: '/dashbord',
+    id: 'dashbord',
     icon: 'mail'
   }, {
-    title: '第二项',
-    link: '/two',
-    id: 'second item',
+    title: '引导页',
+    id: 'direct',
+    icon: 'mail',
+    link: '/direct-page'
+  }, {
+    title: '权限切换',
+    link: '/permission',
+    id: 'permission',
     icon: 'calendar'
   }, {
-    title: '第三项',
-    link: '/three',
-    id: 'third item',
+    title: '表单',
+    link: '/form',
+    id: 'form',
     icon: 'mail'
   }, {
-    title: '第四项',
-    link: '/four',
-    id: 'fourth item',
-    icon: 'calendar'
-  }, {
-    title: '第五项',
-    link: '/five',
-    id: 'fifth item',
-    icon: 'mail'
-  }, {
-    title: '第六项',
-    link: '/six',
-    id: 'sixth item',
-    icon: 'calendar'
-  }, {
-    title: '第七项',
-    link: '/seven',
-    id: 'sevent item',
-    icon: 'mail'
-  }, {
-    title: '第八项',
-    link: '/eight',
-    id: 'eight item',
-    icon: 'calendar'
-  }, {
-    title: '第一项二级菜单',
-    id: 'sub one',
+    title: '表格',
+    id: 'table',
     icon: 'mail',
     children: [{
-      title: 'option 1',
-      id: 'option 1',
+      title: '普通表格',
+      id: 'normal table',
       icon: 'mail',
-      link: 'sub/one'
+      link: '/normal-table'
     }, {
-      title: 'option 2',
-      id: 'option 2',
+      title: '可选排序表格',
+      id: 'select and sort',
       icon: 'setting',
-      link: 'sub/two'
+      link: '/select-sort-table'
     }, {
-      title: '三级子菜单',
-      id: 'option 3',
+      title: '树形表格',
+      id: 'tree tab;e',
       icon: 'calendar',
-      children: [
-        {
-          title: 'option 3',
-          id: 'option 13',
-          icon: 'mail',
-          link: 'sub/sub/1'
-        }, {
-          title: 'option 4',
-          id: 'option 3',
-          icon: 'calendar',
-          link: 'sub/sub/2'
-        }
-      ]
-    }]
-  }, {
-    title: '第二项二级菜单',
-    id: 'sub two',
-    icon: 'calendar',
-    children: [{
-      title: 'option 1',
-      id: 'option 11',
-      icon: 'calendar',
-      link: 'sub1/one'
+      link: '/tree-table'
     }, {
-      title: 'option 2',
-      id: 'option 22',
-      icon: 'calendar',
-      link: 'sub1/two'
-    }]
-  }, {
-    title: '第三项二级菜单',
-    id: 'sub three',
-    icon: 'appstore',
-    children: [{
-      title: 'option 1',
-      id: 'option 14',
-      icon: 'appstore',
-      link: 'sub2/one'
+      title: '可编辑表格',
+      id: 'edit table',
+      icon: 'setting',
+      link: '/editor-table'
     }, {
-      title: 'option 2',
-      id: 'option 24',
-      icon: 'appstore',
-      link: 'sub2/two'
+      title: '可拖拽表格',
+      id: 'drag table',
+      icon: 'setting',
+      link: '/drag-table'
     }]
+  },{
+    title: '图表',
+    link: '/icon',
+    id: 'icon',
+    icon: 'calendar'
   }, {
-    title: '第四项二级菜单',
-    id: 'sub four',
+    title: '数据可视化',
+    id: 'view-data',
     icon: 'mail',
-    children: [{
-      title: 'option 1',
-      id: 'option 15',
-      icon: 'mail',
-      link: 'sub3/one'
-    }, {
-      title: 'option 2',
-      id: 'option 25',
-      icon: 'setting',
-      link: 'sub3/two'
-    }]
+    children: [
+      {
+        title: '饼状图',
+        id: 'pie',
+        icon: 'mail',
+        link: '/pie'
+      },
+      {
+        title: '折线图',
+        id: 'charts',
+        icon: 'mail',
+        link: '/charts'
+      },
+      {
+        title: '其他图',
+        id: 'others',
+        icon: 'mail',
+        link: '/others'
+      },
+    ]
   }, {
-    title: '第五项二级菜单',
-    id: 'sub five',
+    title: '组件',
+    id: 'components',
+    icon: 'calendar',
+    children: [
+      {
+        title: '文本编辑器',
+        id: 'editor text',
+        icon: 'calendar',
+        link: '/editor'
+      },
+      {
+        title: 'Markdown',
+        id: 'Markdown text',
+        icon: 'calendar',
+        link: '/Markdown'
+      },{
+        title: '文章编辑列表',
+        id: 'artical list',
+        icon: 'calendar',
+        link: '/artical-list'
+      },
+      {
+        title: '可拖拽的组件',
+        id: 'can drag',
+        icon: 'calendar',
+        link: '/can-drag'
+      },
+    ]
+  }, {
+    title: '路由嵌套',
+    id: 'router nest',
+    icon: 'mail',
+    children: [
+      {
+        title: 'subMenu 1',
+        id: 'subMenu 1',
+        icon: 'mail',
+        children: [
+          {
+            title: 'subMenu1-1',
+            id: 'subMenu1-1',
+            icon: 'mail',
+            link: '/subMenu1/subMenu1-1'
+          },
+          {
+            title: 'subMenu1-2',
+            id: 'subMenu1-2',
+            icon: 'mail',
+            link: '/subMenu1/subMenu1-2'
+          },
+          {
+            title: 'subMenu1-3',
+            id: 'subMenu1-3',
+            icon: 'mail',
+            children: [
+              {
+                title: 'subMenu1-3-1',
+                id: 'subMenu1-3-1',
+                icon: 'mail',
+                link: '/subMenu1-3-1'
+              }, 
+              {
+                title: 'subMenu1-3-2',
+                id: 'subMenu1-3-2',
+                icon: 'mail',
+                link: '/subMenu1-3-2'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'subMenu 2',
+        id: 'subMenu 2',
+        icon: 'mail',
+        link: '/subMenu2'
+      },
+    ]
+  }, {
+    title: '错误页面',
+    id: 'error-page',
+    icon: 'calendar',
+    children: [
+      {
+        title: '404 page',
+        id: '404 page',
+        icon: 'mail',
+        link: '/notFound'
+      }
+    ]
+  }, {
+    title: '动画展示',
+    id: 'show animation',
     icon: 'calendar',
     children: [{
-      title: 'option 1',
-      id: 'option 16',
+      title: '动画1⃣️',
+      id: 'animated 1',
       icon: 'calendar',
-      link: 'sub4/one'
+      link: '/animated1'
     }, {
-      title: 'option 2',
-      id: 'option 26',
+      title: '动画2⃣️',
+      id: 'animated 2',
       icon: 'calendar',
-      link: 'sub4/two'
+      link: '/animated2'
+    }, {
+      title: '动画3⃣️',
+      id: 'animated 3',
+      icon: 'calendar',
+      link: '/animated3'
+    }, {
+      title: '动画4⃣️',
+      id: 'animated 4',
+      icon: 'calendar',
+      link: '/animated4'
     }]
   }, {
-    title: '第六项二级菜单',
-    id: 'sub six',
-    icon: 'appstore',
-    children: [{
-      title: 'option ',
-      id: 'option 17',
-      icon: 'appstore',
-      link: 'sub5/one'
-    }, {
-      title: 'option 2',
-      id: 'option 27',
-      icon: 'appstore',
-      link: 'sub5/two'
-    }]
+    title: '设置',
+    id: 'setting',
+    icon: 'setting',
+    link: '/setting'
+  }, {
+    title: '语言',
+    id: 'language',
+    icon: 'setting',
+    link: '/language'
+  }, {
+    title: '关于项目',
+    id: 'about',
+    icon: 'mail',
+    link: '/about'
   }
 ]
 

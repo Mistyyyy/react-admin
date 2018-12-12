@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Button } from 'antd'
 import styles from './index.css'
 import history from '../../utils/histoty'
 
-class TopBar extends Component {
+class TopBar extends PureComponent {
   backMenu = this.backMenu.bind(this)
   backMenu() {
     history.push('/')

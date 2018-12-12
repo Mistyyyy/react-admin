@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styles from '../style/main.css'
-import TopBar from '../components/topBar/topBar'
-import Sider from '../components/sider/sider'
-import SidePage from '../components/sidePage/sidePage'
+import TopBar from '../components/topBar/view'
+import Sider from '../components/sider/view'
+import SidePage from '../components/sidePage/view'
 class Main extends Component {
   render() {
     return (
