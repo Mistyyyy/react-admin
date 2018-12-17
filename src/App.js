@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom'
 import Main from './views/main'
 import Login from './views/login'
 import InitPage from './components/initPage/view'
-import FirstPage from './components/firstPage/view'
 import Layout from './components'
 
 const NavWrapper = props => {
