@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Button } from 'antd'
 import styles from './index.css'
+import history from '../../utils/histoty'
 
-class TopBar extends Component {
+class TopBar extends PureComponent {
+  backMenu = this.backMenu.bind(this)
+  backMenu() {
+    history.push('/')
+  }
   render() {
     return (
       <div className={styles.topWrapper}>
-        <h4>the logo placeholder</h4>
+        <h4 onClick={this.backMenu} style={{ cursor:'pointer' }}>the logo placeholder</h4>
         <div>the current menu name</div>
         <div className={styles.userInfo}>
           <div>the userInfo</div>

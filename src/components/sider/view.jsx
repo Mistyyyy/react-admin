@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import styles from './index.css'
 import mockData from '../../mock'
-import { Menu, Icon, Button } from 'antd';
+import { Menu, Icon } from 'antd';
+import { Link } from 'react-router-dom'
 
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+const {  SubMenu, Item } = Menu
 
 const menuList = mockData.map(item => {
   return item.children
@@ -13,19 +13,21 @@ const menuList = mockData.map(item => {
         item.children.map(key => {
           return  !key.children
             ? (
-              <Menu.Item key={key.id} link={key.link}>
-                <Icon type={key.icon} />
-                {key.title}
-              </Menu.Item>
+              <Item key={key.id} link={key.link}>
+                <Link to={key.link}>
+                  <Icon type={key.icon} />
+                  {key.title}
+                </Link>
+              </Item>
             )
             : (
               <SubMenu key={key.id} title={<span><Icon type={key.icon} /><span>{key.title}</span></span>} >
                 {
                   key.children.map(ele => {
-                    return (<Menu.Item key={ele.id} link={ele.link}>
+                    return (<Item key={ele.id} link={ele.link}>
                       <Icon type={ele.icon} />
                       {ele.title}
-                    </Menu.Item>)
+                    </Item>)
                   })
                 }
               </SubMenu>
@@ -34,10 +36,12 @@ const menuList = mockData.map(item => {
       }
     </SubMenu>)
     : (
-        <Menu.Item key={item.id} link={item.link}>
-          <Icon type={item.icon} />
-          {item.title}
-        </Menu.Item>
+        <Item key={item.id} link={item.link}>
+          <Link to={item.link}>
+            <Icon type={item.icon} />
+            {item.title}
+          </Link>
+        </Item>
       )
 })
 
@@ -45,16 +49,15 @@ class Sider extends Component {
   handleClick = this.handleClick.bind(this)
 
   handleClick(e) {
-    console.log(e)
+    // const { item } = e
+    // const { props } = item
+    // history.push(props.link)
   }
 
   
   render() {
     return (
       <div className={styles.siderWrapper}>
-        {/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-          <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
-        </Button> */}
         <Menu
         onClick={this.handleClick}
         style={{ width: 280 }}
