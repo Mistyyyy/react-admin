@@ -4,7 +4,7 @@ class InitPage extends Component {
   render() {
     return (
       <div className={styles.initPage}>
-        <h1>this is home page</h1>
+        <h1>welcome to the react admin</h1>
       </div>
     )
   }

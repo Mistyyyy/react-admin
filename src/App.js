@@ -4,42 +4,43 @@ import Main from './views/main'
 import Login from './views/login'
 import InitPage from './components/initPage/view'
 import FirstPage from './components/firstPage/view'
+import Layout from './components'
 
 const NavWrapper = props => {
   return (
     <Main {...props}>
       <Switch>
         <Route path="/" exact component={InitPage} />
-        <Route path='/dashbord' component={FirstPage}/>
-        <Route path='/direct-page' component={FirstPage}/>
-        <Route path='/permission' component={FirstPage}/>
-        <Route path='/form' component={FirstPage}/>
-        <Route path='/normal-table' component={FirstPage}/>
-        <Route path='/select-sort-table' component={FirstPage}/>
-        <Route path='/tree-table' component={FirstPage}/>
-        <Route path='/editor-table' component={FirstPage}/>
-        <Route path='/drag-table' component={FirstPage}/>
-        <Route path='/icon' component={FirstPage}/>
-        <Route path='/pie' component={FirstPage}/>
-        <Route path='/charts' component={FirstPage}/>
-        <Route path='/others' component={FirstPage}/>
-        <Route path='/editor' component={FirstPage}/>
-        <Route path='/Markdown' component={FirstPage}/>
-        <Route path='/artical-list' component={FirstPage}/>
-        <Route path='/can-drag' component={FirstPage}/>
-        <Route path='/subMenu1/subMenu1-1' component={FirstPage}/>
-        <Route path='/subMenu1/subMenu1-2' component={FirstPage}/>
-        <Route path='/subMenu1-3-1' component={FirstPage}/>
-        <Route path='/subMenu1-3-2' component={FirstPage}/>
-        <Route path='/subMenu2' component={FirstPage}/>
-        <Route path='/notFound' component={FirstPage}/>
-        <Route path='/animated1' component={FirstPage}/>
-        <Route path='/animated2' component={FirstPage}/>
-        <Route path='/animated3' component={FirstPage}/>
-        <Route path='/animated4' component={FirstPage}/>
-        <Route path='/setting' component={FirstPage}/>
-        <Route path='/language' component={FirstPage}/>
-        <Route path='/about' component={FirstPage}/>
+        <Route path='/dashbord' component={Layout.Dashbord}/>
+        <Route path='/direct-page' component={Layout.Direct}/>
+        <Route path='/permission' component={Layout.Permission}/>
+        <Route path='/form' component={Layout.Form}/>
+        <Route path='/normal-table' component={Layout.Table}/>
+        <Route path='/select-sort-table' component={Layout.Table}/>
+        <Route path='/tree-table' component={Layout.Table}/>
+        <Route path='/editor-table' component={Layout.Table}/>
+        <Route path='/drag-table' component={Layout.Table}/>
+        <Route path='/icon' component={Layout.Icon}/>
+        <Route path='/pie' component={Layout.Charts}/>
+        <Route path='/charts' component={Layout.Charts}/>
+        <Route path='/others' component={Layout.Charts}/>
+        <Route path='/editor' component={Layout.Components}/>
+        <Route path='/Markdown' component={Layout.Components}/>
+        <Route path='/artical-list' component={Layout.Components}/>
+        <Route path='/can-drag' component={Layout.Components}/>
+        <Route path='/subMenu1/subMenu1-1' component={Layout.Nested}/>
+        <Route path='/subMenu1/subMenu1-2' component={Layout.Nested}/>
+        <Route path='/subMenu1-3-1' component={Layout.Nested}/>
+        <Route path='/subMenu1-3-2' component={Layout.Nested}/>
+        <Route path='/subMenu2' component={Layout.Nested}/>
+        <Route path='/notFound' component={Layout.Error}/>
+        <Route path='/animated1' component={Layout.Animate}/>
+        <Route path='/animated2' component={Layout.Animate}/>
+        <Route path='/animated3' component={Layout.Animate}/>
+        <Route path='/animated4' component={Layout.Animate}/>
+        <Route path='/setting' component={Layout.Setting}/>
+        <Route path='/language' component={Layout.Language}/>
+        <Route path='/about' component={Layout.About}/>
       </Switch>
     </Main>
   )
