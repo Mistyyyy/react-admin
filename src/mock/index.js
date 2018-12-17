@@ -50,7 +50,7 @@ const menuList = [
       link: '/drag-table'
     }]
   },{
-    title: '图表',
+    title: '图标',
     link: '/icon',
     id: 'icon',
     icon: 'calendar'
