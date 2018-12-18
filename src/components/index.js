@@ -11,6 +11,10 @@ import Language from './language/view'
 import Nested from './nested/view'
 import Permission from './permission/view'
 import Setting from './setting/view'
+import NormalTable from './table/normal/view'
+import SortSelect from './table/sortSelect/view'
+import TreeTable from './table/tree/view'
+import EditTable from './table/edit/view'
 import Table from './table/view'
 
 export default {
@@ -27,5 +31,9 @@ export default {
   Nested,
   Permission,
   Setting,
+  NormalTable,
+  SortSelect,
+  TreeTable,
+  EditTable,
   Table
 }
