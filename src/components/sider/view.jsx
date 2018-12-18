@@ -46,21 +46,11 @@ const menuList = mockData.map(item => {
 })
 
 class Sider extends Component {
-  handleClick = this.handleClick.bind(this)
-
-  handleClick(e) {
-    // const { item } = e
-    // const { props } = item
-    // history.push(props.link)
-  }
-
-  
   render() {
     return (
       <div className={styles.siderWrapper}>
         <Menu
-        onClick={this.handleClick}
-        style={{ width: 280 }}
+        style={{ width: 280, height: '100%' }}
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
         mode="inline"
