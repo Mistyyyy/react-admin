@@ -20,18 +20,18 @@ class Container extends Component {
       if (error) {
         return;
       }
-      const newData = [...this.state.data];
-      const index = newData.findIndex(item => key === item.id);
+      const newData = [...this.state.data]
+      const index = newData.findIndex(item => key === item.id)
       if (index > -1) {
-        const item = newData[index];
+        const item = newData[index]
         newData.splice(index, 1, {
           ...item,
           ...row,
-        });
-        this.setState({ data: newData, editingKey: '' });
+        })
+        this.setState({ data: newData, editingKey: '' })
       } else {
         newData.push(row);
-        this.setState({ data: newData, editingKey: '' });
+        this.setState({ data: newData, editingKey: '' })
       }
     })
   }
@@ -100,7 +100,7 @@ class Container extends Component {
         row: EditRow,
         cell: EditCell,
       },
-    };
+    }
     const columns = this.columns.map(col => {
       if (!col.editable) {
         return col

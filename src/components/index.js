@@ -15,6 +15,7 @@ import NormalTable from './table/normal/view'
 import SortSelect from './table/sortSelect/view'
 import TreeTable from './table/tree/view'
 import EditTable from './table/edit/view'
+import DragTable from './table/drag/view' 
 import Table from './table/view'
 
 export default {
@@ -35,5 +36,6 @@ export default {
   SortSelect,
   TreeTable,
   EditTable,
+  DragTable,
   Table
 }
