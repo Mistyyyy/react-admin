@@ -14,11 +14,11 @@ const NavWrapper = props => {
         <Route path='/direct-page' component={Layout.Direct}/>
         <Route path='/permission' component={Layout.Permission}/>
         <Route path='/form' component={Layout.Form}/>
-        <Route path='/normal-table' component={Layout.Table}/>
-        <Route path='/select-sort-table' component={Layout.Table}/>
-        <Route path='/tree-table' component={Layout.Table}/>
-        <Route path='/editor-table' component={Layout.Table}/>
-        <Route path='/drag-table' component={Layout.Table}/>
+        <Route path='/normal-table' component={Layout.NormalTable}/>
+        <Route path='/select-sort-table' component={Layout.SortSelect}/>
+        <Route path='/tree-table' component={Layout.TreeTable}/>
+        <Route path='/editor-table' component={Layout.EditTable}/>
+        <Route path='/drag-table' component={Layout.DragTable}/>
         <Route path='/icon' component={Layout.Icon}/>
         <Route path='/pie' component={Layout.Charts}/>
         <Route path='/charts' component={Layout.Charts}/>
