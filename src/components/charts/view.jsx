@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
-
+import BarChart from './barCharts'
+import LineChart from './lineCharts'
 class Container extends Component {
   render() {
     return (
       <div>
-        this is charts page
+        <div>
+          <BarChart />
+          {/* <PieChart /> */}
+        </div>
+        <div>
+          <LineChart />
+        </div>
       </div>
     )
   }
