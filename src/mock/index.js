@@ -5325,10 +5325,244 @@ const lineData = [
   ["2015-02-24", 207]
 ]
 
+const pieChartsData = {
+  backgroundColor: '#f00',
+
+  title: {
+    text: 'Customized Pie',
+    left: 'center',
+    top: 20,
+    textStyle: {
+      color: '#fff'
+    }
+  },
+
+  tooltip: {
+    trigger: 'item',
+    formatter: "{a} <br/>{b} : {c} ({d}%)"
+  },
+
+  visualMap: {
+    show: false,
+    min: 80,
+    max: 600,
+    inRange: {
+      colorLightness: [0, 1]
+    }
+  },
+  series: [{
+    name: '访问来源',
+    type: 'pie',
+    radius: '55%',
+    center: ['50%', '50%'],
+    data: [{
+        value: 335,
+        name: '直接访问'
+      },
+      {
+        value: 310,
+        name: '邮件营销'
+      },
+      {
+        value: 274,
+        name: '联盟广告'
+      },
+      {
+        value: 235,
+        name: '视频广告'
+      },
+      {
+        value: 400,
+        name: '搜索引擎'
+      }
+    ].sort(function (a, b) {
+      return a.value - b.value;
+    }),
+    roseType: 'radius',
+    label: {
+      normal: {
+        textStyle: {
+          color: 'rgba(255, 255, 255, 1)'
+        }
+      }
+    },
+    labelLine: {
+      normal: {
+        lineStyle: {
+          color: 'rgba(255, 255, 255, 1)'
+        },
+        smooth: 0.2,
+        length: 10,
+        length2: 20
+      }
+    },
+    itemStyle: {
+      normal: {
+        color: '#c23531',
+        shadowBlur: 200,
+        shadowColor: 'rgba(0, 0, 0, 0.5)'
+      }
+    },
+
+    animationType: 'scale',
+    animationEasing: 'elasticOut',
+    animationDelay: function (idx) {
+      return Math.random() * 200;
+    }
+  }]
+}
+
+const lineChartData = {
+  title: {
+    text: 'Beijing AQI'
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  xAxis: {
+    data: lineData.map(function (item) {
+      return item[0];
+    })
+  },
+  yAxis: {
+    splitLine: {
+      show: false
+    }
+  },
+  toolbox: {
+    left: 'center',
+    feature: {
+      dataZoom: {
+        yAxisIndex: 'none'
+      },
+      restore: {},
+      saveAsImage: {}
+    }
+  },
+  dataZoom: [{
+    startValue: '2014-06-01'
+  }, {
+    type: 'inside'
+  }],
+  visualMap: {
+    top: 10,
+    right: 10,
+    pieces: [{
+      gt: 0,
+      lte: 50,
+      color: '#096'
+    }, {
+      gt: 50,
+      lte: 100,
+      color: '#ffde33'
+    }, {
+      gt: 100,
+      lte: 150,
+      color: '#ff9933'
+    }, {
+      gt: 150,
+      lte: 200,
+      color: '#cc0033'
+    }, {
+      gt: 200,
+      lte: 300,
+      color: '#660099'
+    }, {
+      gt: 300,
+      color: '#7e0023'
+    }],
+    outOfRange: {
+      color: '#999'
+    }
+  },
+  series: {
+    name: 'Beijing AQI',
+    type: 'line',
+    data: lineData.map(function (item) {
+      return item[1];
+    }),
+    markLine: {
+      silent: true,
+      data: [{
+        yAxis: 50
+      }, {
+        yAxis: 100
+      }, {
+        yAxis: 150
+      }, {
+        yAxis: 200
+      }, {
+        yAxis: 300
+      }]
+    }
+  }
+}
+
+const xAxisData = Array.from({ length: 100 })
+  .map((v, i) => `类目${i}`);
+const data1 = Array.from({ length: 100 })
+  .map((v, i) => (Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5)
+const data2 = Array.from({ length: 100 })
+  .map((v, i) => (Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5)
+
+
+const barChartData = {
+  title: {
+    text: '柱状图动画延迟'
+  },
+  legend: {
+    data: ['bar', 'bar2'],
+    align: 'left'
+  },
+  toolbox: {
+    // y: 'bottom',
+    feature: {
+      magicType: {
+        type: ['stack', 'tiled']
+      },
+      dataView: {},
+      saveAsImage: {
+        pixelRatio: 2
+      }
+    }
+  },
+  tooltip: {},
+  xAxis: {
+    data: xAxisData,
+    silent: false,
+    splitLine: {
+      show: false
+    }
+  },
+  yAxis: {},
+  series: [{
+    name: 'bar',
+    type: 'bar',
+    data: data1,
+    animationDelay: function (idx) {
+      return idx * 10;
+    }
+  }, {
+    name: 'bar2',
+    type: 'bar',
+    data: data2,
+    animationDelay: function (idx) {
+      return idx * 10 + 100;
+    }
+  }],
+  animationEasing: 'elasticOut',
+  animationDelayUpdate: function (idx) {
+    return idx * 5;
+  }
+};
+
+
 export default menuList
 
 export {
   tableData,
   treeData,
-  lineData
+  lineChartData,
+  pieChartsData,
+  barChartData
 }
