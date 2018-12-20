@@ -20,9 +20,9 @@ const NavWrapper = props => {
         <Route path='/editor-table' component={Layout.EditTable}/>
         <Route path='/drag-table' component={Layout.DragTable}/>
         <Route path='/icon' component={Layout.Icon}/>
-        <Route path='/pie' component={Layout.Charts}/>
-        <Route path='/charts' component={Layout.Charts}/>
-        <Route path='/others' component={Layout.Charts}/>
+        <Route path='/pie' component={Layout.PieChart}/>
+        <Route path='/charts' component={Layout.LineChart}/>
+        <Route path='/others' component={Layout.BarChart}/>
         <Route path='/editor' component={Layout.Components}/>
         <Route path='/Markdown' component={Layout.Components}/>
         <Route path='/artical-list' component={Layout.Components}/>

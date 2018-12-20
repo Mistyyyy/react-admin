@@ -1,6 +1,8 @@
 import About from './about/view'
 import Animate from './animate/view'
-import Charts from './charts/view'
+import LineChart from './charts/line/view'
+import PieChart from './charts/pie/view'
+import BarChart from './charts/bar/view'
 import Components from './component/view'
 import Dashbord from './dashbord/view'
 import Direct from './direct/view'
@@ -16,12 +18,13 @@ import SortSelect from './table/sortSelect/view'
 import TreeTable from './table/tree/view'
 import EditTable from './table/edit/view'
 import DragTable from './table/drag/view' 
-import Table from './table/view'
 
 export default {
   About,
   Animate,
-  Charts,
+  LineChart,
+  PieChart,
+  BarChart,
   Components,
   Dashbord,
   Direct,
@@ -36,6 +39,5 @@ export default {
   SortSelect,
   TreeTable,
   EditTable,
-  DragTable,
-  Table
+  DragTable
 }
